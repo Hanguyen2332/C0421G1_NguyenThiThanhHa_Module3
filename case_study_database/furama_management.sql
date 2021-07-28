@@ -9,7 +9,7 @@ position_name VARCHAR (45)
 -- creat BoPhan:
 CREATE TABLE section (
 section_id INT PRIMARY KEY AUTO_INCREMENT,
-position_name VARCHAR (45)
+section_name VARCHAR (45)
 );
 -- creat TrinhDo:
 CREATE TABLE `level` (
@@ -43,7 +43,7 @@ level_id INT,
 section_id INT,
 date_of_birth DATE,
 id_card VARCHAR (45),
-salary VARCHAR (45),
+salary INT,
 phone VARCHAR (45),
 email VARCHAR (45),
 address VARCHAR (45),
@@ -87,10 +87,9 @@ service_id INT,
 date_make_contract DATE,
 date_end_contract DATE,
 deposit INT,
-total_payment INT,
-FOREIGN KEY (employee_id) REFERENCES employee (employee_id),
-FOREIGN KEY (customer_id) REFERENCES customer (customer_id),
-FOREIGN KEY (service_id) REFERENCES service (service_id)
+FOREIGN KEY (employee_id) REFERENCES employee (employee_id) ON DELETE CASCADE,
+FOREIGN KEY (customer_id) REFERENCES customer (customer_id) ON DELETE CASCADE,
+FOREIGN KEY (service_id) REFERENCES service (service_id)  ON DELETE CASCADE
 );
 
 -- creat DichVuDiKem:
@@ -98,17 +97,17 @@ CREATE TABLE accompanied_service (
 accompanied_id INT PRIMARY KEY AUTO_INCREMENT,
 accompanied_name VARCHAR (45),
 accompanied_fee INT,
-unit INT,
+unit VARCHAR(10),
 `status` VARCHAR (45)
 );
 
--- creat DichVuDiKem:
+-- creat ChiTietHopDong:
 CREATE TABLE contract_detail (
 cd_id INT PRIMARY KEY AUTO_INCREMENT,
-contract_id INT,
+contract_id INT NOT NULL,
 accompanied_id INT,
 cd_qty INT,
-FOREIGN KEY (contract_id) REFERENCES contract (contract_id),
+FOREIGN KEY (contract_id) REFERENCES contract (contract_id) ON DELETE CASCADE,
 FOREIGN KEY (accompanied_id) REFERENCES accompanied_service (accompanied_id)
 );
 
