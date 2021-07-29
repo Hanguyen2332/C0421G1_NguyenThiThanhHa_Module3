@@ -1,0 +1,29 @@
+div {
+    border: 30px;
+    padding-right: 500px;
+    margin: 15px;
+    font-family: sans-serif;
+}
+h1 {
+    margin-bottom: 1px;
+    font-family:"Times New Roman","Times",serif;
+}
+hr {
+    solid-color: darkgrey;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#margin-set{
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+.text-indent{
+    text-align: justify;
+    text-indent: 50px;
+}
+#light-blue {
+    color: #1ce0e0;
+}
+.blue {
+    color: blue;
+}

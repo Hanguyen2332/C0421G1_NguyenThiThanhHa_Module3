@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+    color: red;
+}
+div {
+    margin-left: 25px;
+    margin-right: 100px;
+    text-align: justify;
+    font-size: 18px;
+}
+.text-indent {
+    text-indent: 50px;
+}

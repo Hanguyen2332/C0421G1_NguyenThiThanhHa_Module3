@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    color: red;
+}
+img {
+    display: block;
+    width: 300px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+}
+div {
+    margin-left: 25px;
+    padding-right: 150px;
+    text-align: justify;
+    font-family: "Times New Roman";
+    font-size: 18px;
+}
