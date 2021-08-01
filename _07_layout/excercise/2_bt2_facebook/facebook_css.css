@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    position: fixed; /*Note: fixed: phải kết hợp vs: width+ top/left...*/
+    top: 0;
+    width: 100%;
+    border: 1px lightgray;
+    font-weight: 600;
+    color: coral;
+    background-color: #ffca2c;
+}
+
+.header input {
+    border-radius: 5px 5px 5px 5px;
+    height: 40px;
+    margin: 0;
+    text-align: right;
+    width: 100%;
+    background-color: #eee9e9;
+    border-color: lightgray;
+}
+
+.header-right {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover { /*tại sao k chuyển màu?*/
+    background-color: #a9a9a9;
+    height: 70px;
+}
+
+img {
+    width: 100%;
+    height: 40px;
+}
+
+.content {
+    margin-top: 100px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    background-color: #eee9e9;
+}
+.left-sidebar {
+    /*border-right: solid 2px grey;*/
+    border-bottom: solid 2px grey;
+}
+.main {
+    border-color: lightgray;
+}
+.tin a {
+    height: 40px;
+    width: 15%;
+    float: left;
+}
+.tin input {
+    border-radius: 20px 20px 20px 20px;
+    width: 85%;
+    height: 40px;
+    border-color: lightgray;
+    padding: 10px;
+    float: left;
+}
+hr {
+    margin-top: 80px;
+}
+.tin p {
+    text-align: center;
+}
+.main div {
+    background-color: white;
+    /*margin-top: 15px;*/
+    margin-bottom: 15px;
+}
+#news{
+    background-color: orange; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+button {
+    height: 40px;
+    width: 110px;
+    text-align: center;
+    border-radius: 7px 7px 7px 7px;
+    font-weight: bold;
+    font-size: 15px;
+    border: 0;
+    margin-bottom: 5px;
+    margin-top: 7px;
+}
+.right-sidebar {
+    border-left: solid 2px grey;
+}
+.add-friend{
+    background-color: white;
+    border-radius:  7px 7px 7px 7px;
+    margin-bottom: 15px;
+}
+.contact p {
+    color: #939090;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.contact a {
+    color: #939090;
+    /*margin-bottom: 15px;*/
+    padding: 0;
+}
+
+

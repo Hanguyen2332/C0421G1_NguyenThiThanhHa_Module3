@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+.menu p{
+    margin: 0;
+    top: 0;
+    width: 7%;
+    float: left;
+    height: 50px;
+    padding-left: 5px;
+    padding-top: 15px;
+    background-color: #282626;
+}
+#menu-last {
+    text-align: right;
+    width: 65%;
+    float: left;
+    height: 50px;
+    padding-top: 15px;
+    padding-right: 45px;
+    background-color: #282626;
+}
+.menu a {
+    text-decoration: none;
+    color: darkgrey;
+    font-size: large;
+}
+.menu p:hover,#menu-last:hover {
+    color: white;
+    background-color: black;
+}
+.div-left {
+    float: left;
+    text-align: center;
+    width: 15%;
+    height: 500px;
+    background-color: lightgray;
+}
+.div-left ul {
+    padding: 0;
+}
+.div-left li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+.div-left li a{
+    text-decoration: none;
+    color: #0a53be;
+}
+.div-main {
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    width: 70%;
+    height: 500px;
+    line-height: 25px;
+}
+
+.div-right {
+    float: left;
+    width: 15%;
+    height: 500px;
+    background-color: lightgray;
+    padding-left: 30px;
+    padding-top: 20px;
+    }
+
+.div-right div {
+    padding: 30px 30px 30px 60px;
+    width: 150px;
+    height: 80px;
+    margin-bottom: 15px;
+    border-radius: 7px 7px 7px 7px;
+    background-color: #adb5bd;
+}
+#footer {
+    clear: both;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    height: 50px;
+    padding-top: 15px;
+    background-color: #636161;
+}

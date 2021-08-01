@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+}
+
+#menu{
+    height: 30px;
+    padding:0;
+    margin:0;
+    background-color: grey;
+    border: 5px solid red;
+}
+#menu ul, #menu li{
+    padding:0;
+    margin:0;
+}
+#menu li{
+    position: relative;
+    float: left;    /*đẩy all element là li (cha+con) --> display inline-block --> cho trôi về phía lề trái?--> kết quả:
+    /*các element li cùng cấp: sẽ nằm trên cùng 1 dòng-thiên cánh trái ??*!*/
+    list-style: none;  /*bỏ dấu hoa thị đầu mỗi li*/
+    margin: 0;
+    padding:0;
+}
+
+/*set: weight của một option trong list (trình đơn), set: height, display và định dạng văn bản của các liên kết trong danh sách (trình đơn):*/
+#menu li a {
+    width: 100px;
+    height: 30px;
+    display: block;  /*bị ăn bởi 'float: left' ở trên --> các thẻ a KHÔNG rớt dòng;*/
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+    color: white;
+}
+#menu ul ul li a {
+    width: 200px;  /*2 selector: #menu li a {}  - #menu ul ul li a {} --> có gì khác nhau?? tại sao phải set width ở cả 2*/
+    text-align: left;  /*??? nhủ trên*/
+    padding-left: 10px;
+}
+
+/*set: hover cho liên kết a --> rơ chuột qua --> chuyển đỏ:  */
+#menu li a:hover{
+    background-color: red;
+}
+
+/*ta thêm một bộ chọn dành cho các danh sách con (trình đơn con) để quy định về vị trí hiển thị của chúng so với mục chọn của trình đơn cha.
+ Bộ chọn đó như sau:*/
+/*bổ sung thêm một mô tả với thuộc tính visibility: hidden --> ẩn bộ chọn #menu ul ul: */
+#menu ul ul{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    visibility: hidden;
+}
+/* rê chuột qua mục chọn của list cha -->hiển thị list con bị ẩn: chúng ta cần tạo thêm một bộ chọn nữa: */
+#menu ul a:hover ul{
+    visibility: visible;
+}
