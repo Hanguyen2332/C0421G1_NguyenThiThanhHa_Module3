@@ -21,6 +21,7 @@ public class ServerTimeServlet extends HttpServlet {
         writer.println("</html>");
     }
 }
+
 // 3TH:
 /*
 1. urlPatterns = "/index" + file .jsp CÓ code --> kq hiển thị = nội dung file .jsp
