@@ -7,22 +7,22 @@ customer_name VARCHAR(50) NOT NULL,
 customer_age INT
 );
 create table `order` (
-order_id VARCHAR (30) primary key,
-customer_id INT NOT NULL,
+order_id INT primary key AUTO_INCREMENT,
+customer_id INT,
 order_date datetime,
-order_total_price decimal(18,2) default 0,
+order_total_price INT null,
 FOREIGN KEY (customer_id) REFERENCES customer (customer_id)
 );
 
 create table product (
-product_id VARCHAR(30) primary key,
-product_name VARCHAR(50) NOT NULL,
-product_price decimal(18,2)
+product_id INT primary key AUTO_INCREMENT,
+product_name VARCHAR(25) NOT NULL,
+product_price INT
 );
 
 create table order_detail (
-order_id VARCHAR (30),
-product_id VARCHAR(30),
+order_id INT,
+product_id INT,
 order_qty INT,
 primary key (order_id, product_id),
 FOREIGN KEY (order_id) REFERENCES `order` (order_id),
