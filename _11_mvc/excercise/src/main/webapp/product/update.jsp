@@ -22,15 +22,15 @@
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name"></td>
+                <td><input type="text" name="name" value="${product.getName()}"></td>
             </tr>
             <tr>
                 <td>Maker</td>
-                <td><input type="text" name="maker"></td>
+                <td><input type="text" name="maker" value="${product.getMaker()}"></td>
             </tr>
             <tr>
                 <td>Price</td>
-                <td><input type="text" name="price"></td>
+                <td><input type="text" name="price" value="${product.getPrice()}"></td>
             </tr>
             <tr>
                 <td></td>
