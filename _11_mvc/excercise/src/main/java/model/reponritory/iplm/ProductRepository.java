@@ -67,14 +67,16 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public Product searchByName(String name) {
-        Product productResult = null;
+    public List<Product> searchByName(String name) {
+        List<Product> productListResult = new ArrayList<>();
         for (Map.Entry<Integer, Product> entry : productList.entrySet()) {
-            if (entry.getValue().getName().equals(name)) {
-                productResult = entry.getValue();
+            Product productResult = null;
+            if (entry.getValue().getName().contains(name)) {
+                productResult = entry.getValue();  //object product
+                productListResult.add(productResult);
             }
         }
-        return productResult;
+        return productListResult;
     }
     //    public static void main(String[] args) {
 //        ProductRepository productRepository = new ProductRepository();

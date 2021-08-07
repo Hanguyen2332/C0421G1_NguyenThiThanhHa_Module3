@@ -32,7 +32,7 @@
         <tr>
             <td>${productObj.getId()}</td>
             <td><a href="/products?action=detail&id=${productObj.getId()}">${productObj.getName()}</a></td>
-            <td>"${productObj.getMaker()}"</td>
+            <td>${productObj.getMaker()}</td>
             <td>"${productObj.getPrice()}"</td>
             <td><a href="/products?action=update&id=${productObj.getId()}">Update</a></td>
             <td><a href="/products?action=delete&id=${productObj.getId()}">Delete</a></td>

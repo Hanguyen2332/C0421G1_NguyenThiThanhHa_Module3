@@ -119,13 +119,13 @@ public class ProductServlet extends HttpServlet {
     //ham search():
     public void search(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
-        Product product = productService.searchByName(name);
+        List<Product> productList = productService.searchByName(name);
         RequestDispatcher dispatcher;
-        if (product == null) {
+        if (productList.isEmpty()) {
             dispatcher = request.getRequestDispatcher("error-404.jsp");
         } else {
-            request.setAttribute("product", product);
-            dispatcher = request.getRequestDispatcher("product/detail.jsp");
+            request.setAttribute("productList", productList);
+            dispatcher = request.getRequestDispatcher("product/search.jsp");
         }
         try {
             dispatcher.forward(request, response);

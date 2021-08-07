@@ -11,11 +11,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
-    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
-}
-
-
-test {
-    useJUnitPlatform()
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
