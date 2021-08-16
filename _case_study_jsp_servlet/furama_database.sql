@@ -29,8 +29,7 @@ service_type_name VARCHAR(45)
 
 CREATE TABLE rent_type (
 rent_type_id INT PRIMARY KEY AUTO_INCREMENT,
-rent_type_name VARCHAR(45),
-rent_type_cost DOUBLE
+rent_type_name VARCHAR(45)
 );
 
 CREATE TABLE attach_service ( 
@@ -66,7 +65,7 @@ CREATE TABLE employee (
 employee_id INT PRIMARY KEY AUTO_INCREMENT,
 employee_name VARCHAR(45),
 employee_birthday DATE,
-employee_id_card VARCHAR(45),
+employee_id_card VARCHAR(45) unique,
 employee_salary DOUBLE,
 employee_phone VARCHAR(45),
 employee_email VARCHAR(45),
@@ -84,11 +83,12 @@ FOREIGN KEY (user_name) REFERENCES user_table (user_name)
 -- //customer//-- 
 CREATE TABLE customer (
 customer_id INT PRIMARY KEY AUTO_INCREMENT,
+customer_code VARCHAR(45) unique,
 customer_type_id INT,
 customer_name VARCHAR(45),
 customer_birthday date,
 customer_gender BIT(1),
-customer_id_card VARCHAR(45),
+customer_id_card VARCHAR(45) unique,
 customer_phone VARCHAR(45),
 customer_email VARCHAR(45),
 customer_address VARCHAR(45),
@@ -98,6 +98,7 @@ FOREIGN KEY (customer_type_id) REFERENCES customer_type (customer_type_id)
 -- //service//--  
 CREATE TABLE service (
 service_id INT PRIMARY KEY AUTO_INCREMENT,
+service_code VARCHAR(45) unique,
 service_name VARCHAR(45),
 service_area DOUBLE,
 service_cost DOUBLE,
@@ -107,7 +108,7 @@ service_type_id INT,
 standard_room VARCHAR(45),
 description_other_convenience VARCHAR(45),
 pool_area DOUBLE,
-room_of_floors INT,
+number_of_floors INT,
 FOREIGN KEY (rent_type_id) REFERENCES rent_type (rent_type_id),
 FOREIGN KEY (service_type_id) REFERENCES service_type (service_type_id)
 );

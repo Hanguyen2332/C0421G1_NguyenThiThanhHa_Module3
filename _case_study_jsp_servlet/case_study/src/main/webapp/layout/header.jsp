@@ -14,13 +14,13 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light py-0 px-0">
     <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.2);">
     <a class="navbar-brand">
-    <img src="../assert/img/furama_logo2.webp" alt="" width="100px" height="90px"
+    <img src="../assert/img/furama_logo2.webp" alt="" width="90px" height="70px"
     class="d-inline-block align-text-top ms-lg-3 ms-sm-3">
     </a>
-    <p class="me-lg-5 me-sm-5" style="font-size: 25px">Lý Mạc Sầu</p>
+    <p class="me-lg-5 me-sm-5 mt-3" style="font-size: 25px">Trần Minh Anh</p>
     </div>
     </nav>
 

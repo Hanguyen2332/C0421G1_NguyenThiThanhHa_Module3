@@ -13,10 +13,12 @@
     </head>
 <body>
 
-    <footer class="bg-light text-center p-0">
+    <footer class="bg-success text-center p-0">
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">Footer.com</a>
+    <a class="text-dark" href="https://mdbootstrap.com/">Furama.com</a>
+    <p>
+    COVID 19 UPDATE: The safety and well-being are our utmost priority</p>
     </div>
     </footer>
 
